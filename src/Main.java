@@ -1,82 +1,102 @@
 public class Main {
-    public static void main(String[] args) {
+ public static void main(String[] args) {
+  task1();
+  task2();
+  task3();
+  task4();
+  task5();
+ }
 
-        // Задание №1
+ public static void task1() {
+  // Задание №1
 
-
-        int dog = 1;
-        byte b = 2;
-        short c = 3;
-        long d = 4L;
-        float e = 4.56F;
-        double k = 4.6;
-        boolean dogIsAdult = dog > 5;
-        char f = 35;
-        System.out.println(dogIsAdult);
-        // Задание №2
-
-        double fighter1 = 78.2F;
-        double fighter2 = 82.7F;
-        double weight = fighter1 + fighter2;
-        double weightDifferense = fighter2 - fighter1;
-        System.out.println("Общий вес " + weight);
-        System.out.println("Разница " + weightDifferense);
-
-        // Задание 3
-
-        int bananas = 5;
-        int milk = 200;
-        int iseCream = 2;
-        int eggs = 4;
-        int Calories = bananas * 80 + iseCream * 100 + eggs * 70 + milk + 10;
-        System.out.println("Количество грамм в завтраке " + Calories);
-        double KilogramWeight = Calories /(float)1000;
-        System.out.println(KilogramWeight);
-
-        int LoseWeight = 7;
-        int  DailyweightLoss250 = 250;
-        float WeightLossPerDay = LoseWeight /(float)DailyweightLoss250;
-        System.out.println(WeightLossPerDay);
-
-        int LoseWeight2 = 7;
-        int  DailyweightLoss500 = 500;
-        float WeightLossPerDay2 = LoseWeight /(float) DailyweightLoss500;
-        System.out.println(WeightLossPerDay2);
+  int dog = 1;
+  byte b = 2;
+  short c = 3;
+  long d = 4L;
+  float e = 4.56F;
+  double k = 4.6;
+  boolean dogIsAdult = dog > 5;
+  char f = 35;
+  System.out.println(dogIsAdult);
+ }
 
 
-
-        int Masha = 67760;
-        int Denis = 83690;
-        int Kristina = 76230;
-        int Masha1 = Masha / 100 * 10;
-        int Denis1 = Denis / 100 * 10;
-        int Kristina1 = Kristina / 100 * 10;
-        System.out.println("Прибавка к зарплате Маши в месяц " + Masha1);
-        System.out.println("Прибавка к зарплате Денис в месяц " + Kristina1);
-        System.out.println("Прибавка к зарплате Кристина в месяц " + Denis1);
-        int TotalSalaryInYearMasha = Masha * 12 + Masha1 * 12;
-        int TotalSalaryInYearDenis = Denis * 12 + Denis1 * 12;
-        int TotalSalaryInYearKristina = Kristina * 12 + Kristina1 * 12;
-        System.out.println("Общая сумма после прибавки  на 10%  " + TotalSalaryInYearMasha);
-        System.out.println("Общая сумма после прибавки  на 10%  " + TotalSalaryInYearDenis);
-        System.out.println("Общая сумма после прибавки  на 10%  " + TotalSalaryInYearKristina);
-        int TotalSalaryInYearMashaWithout10 = TotalSalaryInYearMasha - 813120;
-        int TotalSalaryInYearDenisWithout10 = TotalSalaryInYearDenis - 1004280;
-        int TotalSalaryInYearKristinaWithout10 = TotalSalaryInYearKristina - 914760;
-        System.out.println(" Разница в зарплате " +  TotalSalaryInYearMashaWithout10);
-        System.out.println(" Разница в зарплате " + TotalSalaryInYearDenisWithout10);
-        System.out.println(" Разница в зарплате " + TotalSalaryInYearKristinaWithout10);
+   public static void  task2() {
+    // Задание №2
 
 
+    double fighter1 = 78.2;
+    double fighter2 = 82.7;
+    double weight = fighter1 + fighter2;
+    double weightDifferense = Math.abs(fighter2 - fighter1);
+    System.out.println("Общий вес " + weight);
+    System.out.println("Разница " + weightDifferense);
+
+ }
+   public static void  task3() {
+
+   // Задание 3
+
+    int banana = 5;
+    int bananaWeight = 80;
 
 
+    int milk = 200 / 100;
+    int milkWeight = 105;
+
+    int iseCream = 2;
+    int iseCreamWeight = 100;
+
+    int eggs = 4;
+    int eggWeight = 70;
+
+    int total = (banana * bananaWeight) + (milk * milkWeight) + (iseCream * iseCreamWeight) + (eggs * eggWeight);
+    int gramInKg = 1000;
+    double totalKgs =  (double) total / 1000;
+    System.out.println(totalKgs);
+
+ }
+
+ public static void  task4() {
+  int weight = 7;
+  int gramInKg = 1000;
+  int weightInGrams = weight * gramInKg;
+
+  int minInGramsPerDay = 250;
+  int maxInGramsPerDay = 500;
+
+  int minDays = weightInGrams / maxInGramsPerDay;
+  int maxDays = weightInGrams / minInGramsPerDay;
+
+  int aveDays = (minDays + maxDays) / 2;
+
+  System.out.println("Min " +  minDays);
+  System.out.println("Max " +  maxDays);
+  System.out.println("Avg" +  aveDays);
+
+ }
+  public static void task5() {
+
+  int percent = 10;
+  double multiplier = percent / (100 * 1.0);
+
+   int mashaSalary = 67_760;
+   int denisSalary = 83_690;
+   int kristinaSalary = 76_230;
+
+   int mashaNewSalary = (int) (mashaSalary + (mashaSalary * multiplier));
+   int denisNewSalary = (int) (denisSalary + (denisSalary * multiplier));
+   int kristinaNewSalary = (int) (kristinaSalary + (kristinaSalary * multiplier));
+
+   int mashaDefferense = (mashaNewSalary - mashaSalary) * 12;
+   int denisDefferense = (denisNewSalary - denisSalary) * 12;
+   int kristinaDefferense = (kristinaNewSalary - kristinaSalary) * 12;
+
+   System.out.println("Маши новая зп " + mashaNewSalary + " Разница " + mashaDefferense);
+   System.out.println("Денис новая зп "  + denisNewSalary + " Разница "  + denisDefferense);
+   System.out.println("Денис новая зп "  + kristinaNewSalary + " Разница "  + kristinaDefferense);
 
 
-
-
-
-
-
-
-    }
+ }
 }
